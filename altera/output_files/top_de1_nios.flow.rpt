@@ -1,5 +1,5 @@
 Flow report for top_de1_nios
-Sat Mar 19 16:38:47 2022
+Sat Mar 19 20:48:30 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Mar 19 16:38:34 2022       ;
+; Flow Status                     ; Successful - Sat Mar 19 20:48:11 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; top_de1_nios                                ;
 ; Top-level Entity Name           ; top_de1_nios                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 24 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 41                                          ;
+; Logic utilization (in ALMs)     ; 656 / 32,070 ( 2 % )                        ;
+; Total registers                 ; 936                                         ;
 ; Total pins                      ; 241 / 457 ( 53 % )                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
+; Total block memory bits         ; 141,312 / 4,065,280 ( 3 % )                 ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/19/2022 16:37:01 ;
+; Start date & time ; 03/19/2022 20:44:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_de1_nios        ;
 +-------------------+---------------------+
@@ -78,12 +78,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 115410753088224.164767542008228        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 115410753088224.164769024505372        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
 ; SEARCH_PATH                         ; c:\jbl\de1_nios\de1_nios\altera        ; --            ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
@@ -94,11 +96,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 4799 MB             ; 00:00:40                           ;
-; Fitter               ; 00:01:04     ; 1.0                     ; 6287 MB             ; 00:01:37                           ;
-; Assembler            ; 00:00:09     ; 1.0                     ; 4833 MB             ; 00:00:09                           ;
-; Timing Analyzer      ; 00:00:12     ; 1.0                     ; 5112 MB             ; 00:00:12                           ;
-; Total                ; 00:01:43     ; --                      ; --                  ; 00:02:38                           ;
+; Analysis & Synthesis ; 00:01:29     ; 1.0                     ; 4944 MB             ; 00:02:37                           ;
+; Fitter               ; 00:02:16     ; 1.0                     ; 6285 MB             ; 00:04:13                           ;
+; Assembler            ; 00:00:15     ; 1.0                     ; 4845 MB             ; 00:00:12                           ;
+; Timing Analyzer      ; 00:00:18     ; 1.2                     ; 5167 MB             ; 00:00:20                           ;
+; Total                ; 00:04:18     ; --                      ; --                  ; 00:07:22                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

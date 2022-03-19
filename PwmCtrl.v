@@ -1,14 +1,16 @@
 module PwmCtrl (
 	RST_N,
 	CLK,
-	LED0
+	LED
  ); 
 
-
 input		CLK, RST_N;
-output		LED0;
+output		[9:0] LED;
 reg [27:0]	counter0;
 wire 		counter0_clr, counter0_dec;
+wire [27:0] Decode0;
+wire [27:0] Period0;
+
 
 always @(negedge RST_N or posedge CLK)
 begin
@@ -23,8 +25,26 @@ begin
 	end
 end
 
-assign counter0_clr = (counter0 >= 49999999) ? 1'b1 : 1'b0;
-assign counter0_dec = (counter0 < 25000000) ? 1'b1 : 1'b0;
-assign LED0 = counter0_dec;
+assign counter0_clr = (counter0 >= Period0-1) ? 1'b1 : 1'b0;
+assign counter0_dec = (counter0 < Decode0) ? 1'b1 : 1'b0;
+//assign LED0 = counter0_dec;
+assign LED[0] = counter0_dec;
+assign LED[1] = ~counter0_dec;
+assign LED[2] = counter0[27];
+assign LED[3] = counter0[26];
+assign LED[4] = counter0[25];
+assign LED[5] = counter0[24];
+assign LED[6] = ~counter0[27];
+assign LED[7] = ~counter0[26];
+assign LED[8] = ~counter0[25];
+assign LED[9] = ~counter0[24];
+
+
+    nios2e u0 (
+        .clk_clk                            (CLK),  
+        .reset_reset_n                      (RST_N),  
+        .period0_external_connection_export (Period0), 
+        .decode0_external_connection_export (Decode0)  
+    );
 
 endmodule

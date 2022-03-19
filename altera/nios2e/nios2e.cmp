@@ -1,0 +1,9 @@
+	component nios2e is
+		port (
+			clk_clk                            : in  std_logic                     := 'X'; -- clk
+			decode0_external_connection_export : out std_logic_vector(27 downto 0);        -- export
+			period0_external_connection_export : out std_logic_vector(27 downto 0);        -- export
+			reset_reset_n                      : in  std_logic                     := 'X'  -- reset_n
+		);
+	end component nios2e;
+

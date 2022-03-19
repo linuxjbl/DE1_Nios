@@ -42,8 +42,6 @@ set_global_assignment -name TOP_LEVEL_ENTITY top_de1_nios
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:41:13  MARCH 19, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
-set_global_assignment -name VERILOG_FILE ../top_de1_nios.v
-set_global_assignment -name VERILOG_FILE ../PwmCtrl.v
 set_global_assignment -name SEARCH_PATH "c:\\jbl\\de1_nios\\de1_nios\\altera"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
@@ -776,4 +774,9 @@ set_location_assignment PIN_D11 -to VGA_VS
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 #set_global_assignment -name SDC_FILE DE1_SOC_golden_top.sdc
 
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name QSYS_FILE nios2e.qsys
+set_global_assignment -name VERILOG_FILE ../top_de1_nios.v
+set_global_assignment -name VERILOG_FILE ../PwmCtrl.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

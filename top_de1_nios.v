@@ -179,7 +179,7 @@ PwmCtrl
     PwmCtrl_U00 (
 	.RST_N  (KEY[3]),
 	.CLK    (CLOCK_50),
-	.LED0   (LEDR[0])
+	.LED   (LEDR)
  ); 
 
 
