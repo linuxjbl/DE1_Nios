@@ -25,6 +25,22 @@
          type = "String";
       }
    }
+   element HEX0
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element HEX0.s1
+   {
+      datum baseAddress
+      {
+         value = "262144";
+         type = "String";
+      }
+   }
    element PERIOD0
    {
       datum _sortIndex
@@ -41,11 +57,35 @@
          type = "String";
       }
    }
+   element PUSH
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element PUSH.s1
+   {
+      datum baseAddress
+      {
+         value = "327680";
+         type = "String";
+      }
+   }
    element clk_0
    {
       datum _sortIndex
       {
          value = "0";
+         type = "int";
+      }
+   }
+   element jtag_uart_0
+   {
+      datum _sortIndex
+      {
+         value = "5";
          type = "int";
       }
    }
@@ -109,8 +149,18 @@
    type="conduit"
    dir="end" />
  <interface
+   name="hex0_external_connection"
+   internal="HEX0.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
    name="period0_external_connection"
    internal="PERIOD0.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="push_external_connection"
+   internal="PUSH.external_connection"
    type="conduit"
    dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
@@ -128,6 +178,20 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="28" />
  </module>
+ <module name="HEX0" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="8" />
+ </module>
  <module name="PERIOD0" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -142,11 +206,44 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="28" />
  </module>
+ <module name="PUSH" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="4" />
+ </module>
  <module name="clk_0" kind="clock_source" version="18.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
   <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module
+   name="jtag_uart_0"
+   kind="altera_avalon_jtag_uart"
+   version="18.1"
+   enabled="1">
+  <parameter name="allowMultipleConnections" value="false" />
+  <parameter name="avalonSpec" value="2.0" />
+  <parameter name="clkFreq" value="50000000" />
+  <parameter name="hubInstanceID" value="0" />
+  <parameter name="readBufferDepth" value="64" />
+  <parameter name="readIRQThreshold" value="8" />
+  <parameter name="simInputCharacterStream" value="" />
+  <parameter name="simInteractiveOptions">NO_INTERACTIVE_WINDOWS</parameter>
+  <parameter name="useRegistersForReadBuffer" value="false" />
+  <parameter name="useRegistersForWriteBuffer" value="false" />
+  <parameter name="useRelativePathForSimFile" value="false" />
+  <parameter name="writeBufferDepth" value="64" />
+  <parameter name="writeIRQThreshold" value="8" />
  </module>
  <module
    name="nios2_qsys_0"
@@ -161,8 +258,8 @@
   <parameter name="cpuID_stored" value="0" />
   <parameter name="cpuReset" value="false" />
   <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
-  <parameter name="dataAddrWidth" value="18" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='nios2_qsys_0.jtag_debug_module' start='0x800' end='0x1000' /><slave name='onchip_memory2_0.s1' start='0x10000' end='0x14000' /><slave name='PERIOD0.s1' start='0x20000' end='0x20010' /><slave name='DECODE0.s1' start='0x30000' end='0x30010' /></address-map>]]></parameter>
+  <parameter name="dataAddrWidth" value="19" />
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='jtag_uart_0.avalon_jtag_slave' start='0x0' end='0x8' /><slave name='nios2_qsys_0.jtag_debug_module' start='0x800' end='0x1000' /><slave name='onchip_memory2_0.s1' start='0x10000' end='0x14000' /><slave name='PERIOD0.s1' start='0x20000' end='0x20010' /><slave name='DECODE0.s1' start='0x30000' end='0x30010' /><slave name='HEX0.s1' start='0x40000' end='0x40010' /><slave name='PUSH.s1' start='0x50000' end='0x50010' /></address-map>]]></parameter>
   <parameter name="dcache_bursts" value="false" />
   <parameter name="dcache_lineSize" value="32" />
   <parameter name="dcache_numTCDM" value="0" />
@@ -190,7 +287,7 @@
   <parameter name="impl" value="Tiny" />
   <parameter name="instAddrWidth" value="17" />
   <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='nios2_qsys_0.jtag_debug_module' start='0x800' end='0x1000' /><slave name='onchip_memory2_0.s1' start='0x10000' end='0x14000' /></address-map>]]></parameter>
-  <parameter name="internalIrqMaskSystemInfo" value="0" />
+  <parameter name="internalIrqMaskSystemInfo" value="1" />
   <parameter name="manuallyAssignCpuID" value="true" />
   <parameter name="mmu_TLBMissExcOffset" value="0" />
   <parameter name="mmu_TLBMissExcSlave" value="None" />
@@ -315,6 +412,15 @@
    kind="avalon"
    version="18.1"
    start="nios2_qsys_0.data_master"
+   end="jtag_uart_0.avalon_jtag_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
    end="nios2_qsys_0.jtag_debug_module">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0800" />
@@ -350,6 +456,24 @@
  <connection
    kind="avalon"
    version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="HEX0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00040000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="PUSH.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00050000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
    start="nios2_qsys_0.instruction_master"
    end="nios2_qsys_0.jtag_debug_module">
   <parameter name="arbitrationPriority" value="1" />
@@ -368,11 +492,21 @@
  <connection kind="clock" version="18.1" start="clk_0.clk" end="nios2_qsys_0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="PERIOD0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="DECODE0.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="jtag_uart_0.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="HEX0.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="PUSH.clk" />
  <connection
    kind="clock"
    version="18.1"
    start="clk_0.clk"
    end="onchip_memory2_0.clk1" />
+ <connection
+   kind="interrupt"
+   version="18.1"
+   start="nios2_qsys_0.d_irq"
+   end="jtag_uart_0.irq">
+  <parameter name="irqNumber" value="0" />
+ </connection>
  <connection
    kind="reset"
    version="18.1"
@@ -383,6 +517,13 @@
    version="18.1"
    start="clk_0.clk_reset"
    end="DECODE0.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="jtag_uart_0.reset" />
+ <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="HEX0.reset" />
+ <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="PUSH.reset" />
  <connection
    kind="reset"
    version="18.1"
@@ -403,6 +544,21 @@
    version="18.1"
    start="nios2_qsys_0.jtag_debug_module_reset"
    end="DECODE0.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="jtag_uart_0.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="HEX0.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="PUSH.reset" />
  <connection
    kind="reset"
    version="18.1"

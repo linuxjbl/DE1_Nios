@@ -179,7 +179,10 @@ PwmCtrl
     PwmCtrl_U00 (
 	.RST_N  (KEY[3]),
 	.CLK    (CLOCK_50),
-	.LED   (LEDR)
+	.LED    (LEDR),
+	.HEX0   (HEX0),
+	.HEX1   (HEX1),
+	.PUSH   (KEY)
  ); 
 
 

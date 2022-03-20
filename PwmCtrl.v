@@ -1,11 +1,18 @@
 module PwmCtrl (
 	RST_N,
 	CLK,
-	LED
+	LED,
+	HEX0,
+	HEX1,
+	PUSH
  ); 
 
 input		CLK, RST_N;
 output		[9:0] LED;
+output		[6:0] HEX0;
+output		[6:0] HEX1;
+input		[3:0] PUSH;
+
 reg [27:0]	counter0;
 wire 		counter0_clr, counter0_dec;
 wire [27:0] Decode0;
@@ -44,7 +51,11 @@ assign LED[9] = ~counter0[24];
         .clk_clk                            (CLK),  
         .reset_reset_n                      (RST_N),  
         .period0_external_connection_export (Period0), 
-        .decode0_external_connection_export (Decode0)  
+        .decode0_external_connection_export (Decode0),
+        .hex0_external_connection_export    
+				({HEX1[0], HEX0[6:0]}), 
+        .push_external_connection_export    (PUSH[1:0]) 
+ 
     );
 
 endmodule
