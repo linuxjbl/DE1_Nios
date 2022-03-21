@@ -25,6 +25,118 @@
          type = "String";
       }
    }
+   element DECODE1
+   {
+      datum _sortIndex
+      {
+         value = "15";
+         type = "int";
+      }
+   }
+   element DECODE1.s1
+   {
+      datum baseAddress
+      {
+         value = "200704";
+         type = "String";
+      }
+   }
+   element DECODE2
+   {
+      datum _sortIndex
+      {
+         value = "16";
+         type = "int";
+      }
+   }
+   element DECODE2.s1
+   {
+      datum baseAddress
+      {
+         value = "204800";
+         type = "String";
+      }
+   }
+   element DECODE3
+   {
+      datum _sortIndex
+      {
+         value = "17";
+         type = "int";
+      }
+   }
+   element DECODE3.s1
+   {
+      datum baseAddress
+      {
+         value = "208896";
+         type = "String";
+      }
+   }
+   element DECODE4
+   {
+      datum _sortIndex
+      {
+         value = "18";
+         type = "int";
+      }
+   }
+   element DECODE4.s1
+   {
+      datum baseAddress
+      {
+         value = "212992";
+         type = "String";
+      }
+   }
+   element DECODE5
+   {
+      datum _sortIndex
+      {
+         value = "19";
+         type = "int";
+      }
+   }
+   element DECODE5.s1
+   {
+      datum baseAddress
+      {
+         value = "217088";
+         type = "String";
+      }
+   }
+   element DECODE6
+   {
+      datum _sortIndex
+      {
+         value = "20";
+         type = "int";
+      }
+   }
+   element DECODE6.s1
+   {
+      datum baseAddress
+      {
+         value = "221184";
+         type = "String";
+      }
+   }
+   element DECODE7
+   {
+      datum _sortIndex
+      {
+         value = "21";
+         type = "int";
+      }
+   }
+   element DECODE7.s1
+   {
+      datum baseAddress
+      {
+         value = "225280";
+         type = "String";
+      }
+   }
    element HEX0
    {
       datum _sortIndex
@@ -54,6 +166,118 @@
       datum baseAddress
       {
          value = "131072";
+         type = "String";
+      }
+   }
+   element PERIOD1
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element PERIOD1.s1
+   {
+      datum baseAddress
+      {
+         value = "135168";
+         type = "String";
+      }
+   }
+   element PERIOD2
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element PERIOD2.s1
+   {
+      datum baseAddress
+      {
+         value = "139264";
+         type = "String";
+      }
+   }
+   element PERIOD3
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element PERIOD3.s1
+   {
+      datum baseAddress
+      {
+         value = "143360";
+         type = "String";
+      }
+   }
+   element PERIOD4
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element PERIOD4.s1
+   {
+      datum baseAddress
+      {
+         value = "147456";
+         type = "String";
+      }
+   }
+   element PERIOD5
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element PERIOD5.s1
+   {
+      datum baseAddress
+      {
+         value = "151552";
+         type = "String";
+      }
+   }
+   element PERIOD6
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+   }
+   element PERIOD6.s1
+   {
+      datum baseAddress
+      {
+         value = "155648";
+         type = "String";
+      }
+   }
+   element PERIOD7
+   {
+      datum _sortIndex
+      {
+         value = "14";
+         type = "int";
+      }
+   }
+   element PERIOD7.s1
+   {
+      datum baseAddress
+      {
+         value = "159744";
          type = "String";
       }
    }
@@ -149,6 +373,41 @@
    type="conduit"
    dir="end" />
  <interface
+   name="decode1_external_connection"
+   internal="DECODE1.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="decode2_external_connection"
+   internal="DECODE2.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="decode3_external_connection"
+   internal="DECODE3.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="decode4_external_connection"
+   internal="DECODE4.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="decode5_external_connection"
+   internal="DECODE5.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="decode6_external_connection"
+   internal="DECODE6.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="decode7_external_connection"
+   internal="DECODE7.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
    name="hex0_external_connection"
    internal="HEX0.external_connection"
    type="conduit"
@@ -159,12 +418,145 @@
    type="conduit"
    dir="end" />
  <interface
+   name="period1_external_connection"
+   internal="PERIOD1.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="period2_external_connection"
+   internal="PERIOD2.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="period3_external_connection"
+   internal="PERIOD3.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="period4_external_connection"
+   internal="PERIOD4.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="period5_external_connection"
+   internal="PERIOD5.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="period6_external_connection"
+   internal="PERIOD6.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="period7_external_connection"
+   internal="PERIOD7.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
    name="push_external_connection"
    internal="PUSH.external_connection"
    type="conduit"
    dir="end" />
  <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <module name="DECODE0" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="DECODE1" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="DECODE2" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="DECODE3" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="DECODE4" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="DECODE5" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="DECODE6" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="DECODE7" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -193,6 +585,104 @@
   <parameter name="width" value="8" />
  </module>
  <module name="PERIOD0" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="PERIOD1" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="PERIOD2" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="PERIOD3" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="PERIOD4" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="PERIOD5" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="PERIOD6" kind="altera_avalon_pio" version="18.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="28" />
+ </module>
+ <module name="PERIOD7" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -259,7 +749,7 @@
   <parameter name="cpuReset" value="false" />
   <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
   <parameter name="dataAddrWidth" value="19" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='jtag_uart_0.avalon_jtag_slave' start='0x0' end='0x8' /><slave name='nios2_qsys_0.jtag_debug_module' start='0x800' end='0x1000' /><slave name='onchip_memory2_0.s1' start='0x10000' end='0x14000' /><slave name='PERIOD0.s1' start='0x20000' end='0x20010' /><slave name='DECODE0.s1' start='0x30000' end='0x30010' /><slave name='HEX0.s1' start='0x40000' end='0x40010' /><slave name='PUSH.s1' start='0x50000' end='0x50010' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='jtag_uart_0.avalon_jtag_slave' start='0x0' end='0x8' /><slave name='nios2_qsys_0.jtag_debug_module' start='0x800' end='0x1000' /><slave name='onchip_memory2_0.s1' start='0x10000' end='0x14000' /><slave name='PERIOD0.s1' start='0x20000' end='0x20010' /><slave name='PERIOD1.s1' start='0x21000' end='0x21010' /><slave name='PERIOD2.s1' start='0x22000' end='0x22010' /><slave name='PERIOD3.s1' start='0x23000' end='0x23010' /><slave name='PERIOD4.s1' start='0x24000' end='0x24010' /><slave name='PERIOD5.s1' start='0x25000' end='0x25010' /><slave name='PERIOD6.s1' start='0x26000' end='0x26010' /><slave name='PERIOD7.s1' start='0x27000' end='0x27010' /><slave name='DECODE0.s1' start='0x30000' end='0x30010' /><slave name='DECODE1.s1' start='0x31000' end='0x31010' /><slave name='DECODE2.s1' start='0x32000' end='0x32010' /><slave name='DECODE3.s1' start='0x33000' end='0x33010' /><slave name='DECODE4.s1' start='0x34000' end='0x34010' /><slave name='DECODE5.s1' start='0x35000' end='0x35010' /><slave name='DECODE6.s1' start='0x36000' end='0x36010' /><slave name='DECODE7.s1' start='0x37000' end='0x37010' /><slave name='HEX0.s1' start='0x40000' end='0x40010' /><slave name='PUSH.s1' start='0x50000' end='0x50010' /></address-map>]]></parameter>
   <parameter name="dcache_bursts" value="false" />
   <parameter name="dcache_lineSize" value="32" />
   <parameter name="dcache_numTCDM" value="0" />
@@ -474,6 +964,132 @@
  <connection
    kind="avalon"
    version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="PERIOD1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00021000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="PERIOD2.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00022000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="PERIOD3.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00023000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="PERIOD4.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00024000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="PERIOD5.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00025000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="PERIOD6.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00026000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="PERIOD7.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00027000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="DECODE1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00031000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="DECODE2.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00032000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="DECODE3.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00033000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="DECODE4.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00034000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="DECODE5.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00035000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="DECODE6.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00036000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
+   start="nios2_qsys_0.data_master"
+   end="DECODE7.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00037000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="18.1"
    start="nios2_qsys_0.instruction_master"
    end="nios2_qsys_0.jtag_debug_module">
   <parameter name="arbitrationPriority" value="1" />
@@ -495,6 +1111,20 @@
  <connection kind="clock" version="18.1" start="clk_0.clk" end="jtag_uart_0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="HEX0.clk" />
  <connection kind="clock" version="18.1" start="clk_0.clk" end="PUSH.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="PERIOD1.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="PERIOD2.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="PERIOD3.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="PERIOD4.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="PERIOD5.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="PERIOD6.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="PERIOD7.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="DECODE1.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="DECODE2.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="DECODE3.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="DECODE4.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="DECODE5.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="DECODE6.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="DECODE7.clk" />
  <connection
    kind="clock"
    version="18.1"
@@ -524,6 +1154,76 @@
    end="jtag_uart_0.reset" />
  <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="HEX0.reset" />
  <connection kind="reset" version="18.1" start="clk_0.clk_reset" end="PUSH.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="PERIOD1.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="PERIOD2.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="PERIOD3.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="PERIOD4.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="PERIOD5.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="PERIOD6.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="PERIOD7.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="DECODE1.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="DECODE2.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="DECODE3.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="DECODE4.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="DECODE5.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="DECODE6.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clk_0.clk_reset"
+   end="DECODE7.reset" />
  <connection
    kind="reset"
    version="18.1"
@@ -559,6 +1259,76 @@
    version="18.1"
    start="nios2_qsys_0.jtag_debug_module_reset"
    end="PUSH.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="PERIOD1.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="PERIOD2.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="PERIOD3.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="PERIOD4.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="PERIOD5.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="PERIOD6.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="PERIOD7.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="DECODE1.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="DECODE2.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="DECODE3.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="DECODE4.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="DECODE5.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="DECODE6.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="DECODE7.reset" />
  <connection
    kind="reset"
    version="18.1"
