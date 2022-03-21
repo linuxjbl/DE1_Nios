@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Mar 21 22:36:23 2022
+Analysis & Synthesis Status : Successful - Tue Mar 22 04:50:24 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : top_de1_nios
 Top-level Entity Name : top_de1_nios
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2102
+Total registers : 2207
 Total pins : 241
 Total virtual pins : 0
 Total block memory bits : 142,336

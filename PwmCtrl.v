@@ -4,6 +4,10 @@ module PwmCtrl (
 	LED,
 	HEX0,
 	HEX1,
+	HEX2,
+	HEX3,
+	HEX4,
+	HEX5,
 	PUSH
  ); 
 
@@ -11,6 +15,10 @@ input		CLK, RST_N;
 output		[9:0] LED;
 output		[6:0] HEX0;
 output		[6:0] HEX1;
+output		[6:0] HEX2;
+output		[6:0] HEX3;
+output		[6:0] HEX4;
+output		[6:0] HEX5;
 input		[3:0] PUSH;
 
 reg [27:0]	counter0;
@@ -233,8 +241,12 @@ assign counter7_dec = (counter7 < Decode7) ? 1'b1 : 1'b0;
         .decode6_external_connection_export (Decode6),
         .period7_external_connection_export (Period7), 
         .decode7_external_connection_export (Decode7),
-        .hex0_external_connection_export    
-				({HEX1[0], HEX0[6:0]}), 
+        .hex0_external_connection_export    ({HEX5[0], HEX0[6:0]}), 
+        .hex1_external_connection_export    ({HEX5[1], HEX1[6:0]}), 
+        .hex2_external_connection_export    ({HEX5[2], HEX2[6:0]}), 
+        .hex3_external_connection_export    ({HEX5[3], HEX3[6:0]}), 
+        .hex4_external_connection_export    (), 
+        .hex5_external_connection_export    (), 
         .push_external_connection_export    (PUSH[1:0]) 
  
     );
