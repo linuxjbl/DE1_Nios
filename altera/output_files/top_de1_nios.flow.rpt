@@ -1,5 +1,5 @@
 Flow report for top_de1_nios
-Tue Mar 22 04:53:38 2022
+Tue Mar 22 22:11:28 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Mar 22 04:53:13 2022       ;
+; Flow Status                     ; Successful - Tue Mar 22 22:11:04 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; top_de1_nios                                ;
 ; Top-level Entity Name           ; top_de1_nios                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,569 / 32,070 ( 5 % )                      ;
-; Total registers                 ; 2351                                        ;
+; Logic utilization (in ALMs)     ; 1,568 / 32,070 ( 5 % )                      ;
+; Total registers                 ; 2362                                        ;
 ; Total pins                      ; 241 / 457 ( 53 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 142,336 / 4,065,280 ( 4 % )                 ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/22/2022 04:47:44 ;
+; Start date & time ; 03/22/2022 22:05:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_de1_nios        ;
 +-------------------+---------------------+
@@ -78,9 +78,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 115410753088224.164789206405760        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 115410753088224.164795433507444        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -96,11 +100,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:02:37     ; 1.0                     ; 5052 MB             ; 00:04:15                           ;
-; Fitter               ; 00:02:32     ; 1.1                     ; 6305 MB             ; 00:04:52                           ;
-; Assembler            ; 00:00:12     ; 1.0                     ; 4872 MB             ; 00:00:12                           ;
-; Timing Analyzer      ; 00:00:24     ; 1.4                     ; 5197 MB             ; 00:00:31                           ;
-; Total                ; 00:05:45     ; --                      ; --                  ; 00:09:50                           ;
+; Analysis & Synthesis ; 00:02:30     ; 1.0                     ; 5051 MB             ; 00:03:46                           ;
+; Fitter               ; 00:02:35     ; 1.1                     ; 6306 MB             ; 00:05:09                           ;
+; Assembler            ; 00:00:16     ; 1.0                     ; 4869 MB             ; 00:00:16                           ;
+; Timing Analyzer      ; 00:00:23     ; 1.4                     ; 5196 MB             ; 00:00:30                           ;
+; Total                ; 00:05:44     ; --                      ; --                  ; 00:09:41                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

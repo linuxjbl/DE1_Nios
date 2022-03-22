@@ -36,7 +36,7 @@ module nios2e_onchip_memory2_0 (
                                )
 ;
 
-  parameter INIT_FILE = "nios2e_onchip_memory2_0.hex";
+  parameter INIT_FILE = "C:/JBL/DE1_Nios/DE1_Nios/altera/software/epcs_app03/mem_init/nios2e_onchip_memory2_0.hex";
 
 
   output  [ 31: 0] readdata;

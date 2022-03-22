@@ -1,0 +1,16 @@
+22:04:59 **** Build of configuration Nios II for project epcs_app03 ****
+make mem_init_generate 
+Info: Building ../epcs_app03_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../epcs_app03_bsp/
+[BSP build complete]
+Post-processing to create mem_init/nios2e_onchip_memory2_0.hex...
+elf2hex epcs_app03.elf 0x00010000 0x00013fff --width=32 --little-endian-mem --create-lanes=0 mem_init/nios2e_onchip_memory2_0.hex
+Post-processing to create mem_init/hdl_sim/nios2e_onchip_memory2_0.dat...
+elf2dat --infile=epcs_app03.elf --outfile=mem_init/hdl_sim/nios2e_onchip_memory2_0.dat \
+		--base=0x00010000 --end=0x00013fff --width=32 \
+		--little-endian-mem --create-lanes=0 
+Post-processing to create mem_init/hdl_sim/nios2e_onchip_memory2_0.sym...
+nios2-elf-nm -n epcs_app03.elf > mem_init/hdl_sim/nios2e_onchip_memory2_0.sym
+
+22:05:02 Build Finished (took 2s.509ms)
+
