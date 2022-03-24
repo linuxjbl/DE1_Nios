@@ -14,6 +14,15 @@
 		.hex3_external_connection_export    (<connected-to-hex3_external_connection_export>),    //    hex3_external_connection.export
 		.hex4_external_connection_export    (<connected-to-hex4_external_connection_export>),    //    hex4_external_connection.export
 		.hex5_external_connection_export    (<connected-to-hex5_external_connection_export>),    //    hex5_external_connection.export
+		.new_sdram_controller_0_wire_addr   (<connected-to-new_sdram_controller_0_wire_addr>),   // new_sdram_controller_0_wire.addr
+		.new_sdram_controller_0_wire_ba     (<connected-to-new_sdram_controller_0_wire_ba>),     //                            .ba
+		.new_sdram_controller_0_wire_cas_n  (<connected-to-new_sdram_controller_0_wire_cas_n>),  //                            .cas_n
+		.new_sdram_controller_0_wire_cke    (<connected-to-new_sdram_controller_0_wire_cke>),    //                            .cke
+		.new_sdram_controller_0_wire_cs_n   (<connected-to-new_sdram_controller_0_wire_cs_n>),   //                            .cs_n
+		.new_sdram_controller_0_wire_dq     (<connected-to-new_sdram_controller_0_wire_dq>),     //                            .dq
+		.new_sdram_controller_0_wire_dqm    (<connected-to-new_sdram_controller_0_wire_dqm>),    //                            .dqm
+		.new_sdram_controller_0_wire_ras_n  (<connected-to-new_sdram_controller_0_wire_ras_n>),  //                            .ras_n
+		.new_sdram_controller_0_wire_we_n   (<connected-to-new_sdram_controller_0_wire_we_n>),   //                            .we_n
 		.period0_external_connection_export (<connected-to-period0_external_connection_export>), // period0_external_connection.export
 		.period1_external_connection_export (<connected-to-period1_external_connection_export>), // period1_external_connection.export
 		.period2_external_connection_export (<connected-to-period2_external_connection_export>), // period2_external_connection.export

@@ -8,7 +8,16 @@ module PwmCtrl (
 	HEX3,
 	HEX4,
 	HEX5,
-	PUSH
+	PUSH,
+    DRAM_ADDR,   // new_sdram_controller_0_wire.addr
+    DRAM_BA,     //                            .ba
+	DRAM_CAS_N,  //                            .cas_n
+	DRAM_CKE,    //                            .cke
+	DRAM_CS_N,   //                            .cs_n
+	DRAM_DQ,     //                            .dq
+	DRAM_DQM,    //                            .dqm
+	DRAM_RAS_N,  //                            .ras_n
+	DRAM_WE_N    //    
  ); 
 
 input		CLK, RST_N;
@@ -20,6 +29,15 @@ output		[6:0] HEX3;
 output		[6:0] HEX4;
 output		[6:0] HEX5;
 input		[3:0] PUSH;
+output      [12:0]  DRAM_ADDR;   // new_sdram_controller_0_wire.addr
+output      [1:0]   DRAM_BA;     //                            .ba
+output	            DRAM_CAS_N;  //                            .cas_n
+output	            DRAM_CKE;    //                            .cke
+output	            DRAM_CS_N;   //                            .cs_n
+inout	    [15:0]  DRAM_DQ;     //                            .dq
+output	    [1:0]   DRAM_DQM;    //                            .dqm
+output	            DRAM_RAS_N;  //                            .ras_n
+output	            DRAM_WE_N;    //    
 
 reg [27:0]	counter0;
 wire 		counter0_clr, counter0_dec;
@@ -247,7 +265,17 @@ assign counter7_dec = (counter7 < Decode7) ? 1'b1 : 1'b0;
         .hex3_external_connection_export    ({HEX5[3], HEX3[6:0]}), 
         .hex4_external_connection_export    (), 
         .hex5_external_connection_export    (), 
-        .push_external_connection_export    (PUSH[1:0]) 
+        .push_external_connection_export    (PUSH[1:0]),
+        .new_sdram_controller_0_wire_addr   (DRAM_ADDR),   // new_sdram_controller_0_wire.addr
+		.new_sdram_controller_0_wire_ba     (DRAM_BA),     //                            .ba
+		.new_sdram_controller_0_wire_cas_n  (DRAM_CAS_N),  //                            .cas_n
+		.new_sdram_controller_0_wire_cke    (DRAM_CKE),    //                            .cke
+		.new_sdram_controller_0_wire_cs_n   (DRAM_CS_N),   //                            .cs_n
+		.new_sdram_controller_0_wire_dq     (DRAM_DQ),     //                            .dq
+		.new_sdram_controller_0_wire_dqm    (DRAM_DQM),    //                            .dqm
+		.new_sdram_controller_0_wire_ras_n  (DRAM_RAS_N),  //                            .ras_n
+		.new_sdram_controller_0_wire_we_n   (DRAM_WE_N)    //                            .we_n
+ 
  
     );
 

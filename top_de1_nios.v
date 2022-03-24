@@ -186,7 +186,16 @@ PwmCtrl
 	.HEX3   (HEX3),
 	.HEX4   (HEX4),
 	.HEX5   (HEX5),
-	.PUSH   (KEY)
+	.PUSH   (KEY),
+    .DRAM_ADDR  (DRAM_ADDR),   // new_sdram_controller_0_wire.addr
+    .DRAM_BA    (DRAM_BA),     //                            .ba
+	.DRAM_CAS_N (DRAM_CAS_N),  //                            .cas_n
+	.DRAM_CKE   (DRAM_CKE),    //                            .cke
+	.DRAM_CS_N  (DRAM_CS_N),   //                            .cs_n
+	.DRAM_DQ    (DRAM_DQ),     //                            .dq
+	.DRAM_DQM   ({DRAM_UDQM, DRAM_LDQM}),    //              .dqm
+	.DRAM_RAS_N (DRAM_RAS_N),  //                            .ras_n
+	.DRAM_WE_N  (DRAM_WE_N)    //   
  ); 
 
 
